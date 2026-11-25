@@ -1,0 +1,158 @@
+{
+  "id": "umbra-kopje",
+  "category": "flag",
+  "overlays": [
+    "unclear_phrase",
+    "date_arithmetic"
+  ],
+  "twin_of": "sisal-harbour",
+  "twin_fact": "earlier business flights this year: 8 or 7",
+  "flag_twins": [
+    "sisal-harbour",
+    "dik-dik-meadow"
+  ],
+  "ambiguity_note": {
+    "phrase": "not expected to be more than 8 flights per year",
+    "readings": [
+      "an expectation for budgeting: the director may still fly business on a ninth flight",
+      "a limit: beyond eight flights the director flies economy unless the CEO grants an exception"
+    ]
+  },
+  "request": "Business class from Nairobi to Dubai on 14 December please, for the co-investment talks the next morning.",
+  "trip": {
+    "traveller_name": "Joseph Kimani",
+    "traveller_title": "Executive Director, Board member",
+    "role": "EXECUTIVE_DIRECTOR",
+    "accompanies": "",
+    "job_grade": 0,
+    "works_remotely": false,
+    "exco_or_board_member": true,
+    "origin": "NBO",
+    "destination": "DXB",
+    "travel_date": "2026-12-14",
+    "booking_date": "2026-11-24",
+    "work_starts": "2026-12-15 09:30",
+    "purpose": "Co-investment talks with a Gulf development fund in Dubai",
+    "purpose_kind": "PARTNER_MEETING",
+    "requested_cabin": "BUSINESS",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [
+      "2026-01-21",
+      "2026-02-24",
+      "2026-04-08",
+      "2026-05-19",
+      "2026-07-07",
+      "2026-09-15",
+      "2026-10-27",
+      "2026-11-10"
+    ],
+    "colleagues_booked": [],
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "DXB",
+        "date": "2026-12-14",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "emirates": {
+            "carrier": "EK",
+            "depart": "10:20"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "16:45"
+          }
+        },
+        "offers": [
+          {
+            "slot": "emirates-economy",
+            "flight": "emirates",
+            "cabin": "ECONOMY",
+            "fare_cents": 43000
+          },
+          {
+            "slot": "emirates-business",
+            "flight": "emirates",
+            "cabin": "BUSINESS",
+            "fare_cents": 162000
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 45500
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 158000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "emirates-economy",
+      "kenya-business"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "CHIEF_EXECUTIVE",
+      "DIRECTOR_CORPORATE_SERVICES",
+      "NOT_NAMED"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION",
+      "OPERATING_PRINCIPLES"
+    ],
+    "unclear_phrase": "not expected to be more than 8 flights per year"
+  },
+  "must_keep": [
+    {
+      "lines": [
+        132,
+        133
+      ],
+      "sha256": "9e1edb1e96541e278d16296d660ff9833cc8ff4d79f9cd0a9e5e3d36cd302ee4",
+      "quote": "Executive directors Business (not expected to be more than 8 flights per year)",
+      "why": "executive directors: business, not expected to be more than 8 flights a year"
+    },
+    {
+      "lines": [
+        150,
+        152
+      ],
+      "sha256": "2aa3c6c0cb0cc633d9890b328f92ebea4babf52ce137534c2936e3af47b5ab71",
+      "quote": "Where there is any doubt as to whether to book a particular class of travel or hotel etc., all personnel must consult with the DCS in advance. Exceptions to the classes of travel described above will need to be approved by the CEO.",
+      "why": "in doubt over the class, consult the DCS in advance; class exceptions need the CEO"
+    },
+    {
+      "lines": [
+        114,
+        115
+      ],
+      "sha256": "dc370ffa62845ed4131fbfc31ceef4677d220a475b81ba5810942c56b9f4293b",
+      "quote": "f) The CEO (or, in cases where exceptions relate to the CEO, the Board Chairman) retains the authority to approve exceptions where absolutely necessar y.",
+      "why": "the CEO approves exceptions where absolutely necessary"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 132-133: executive directors fly business, 'not expected to be more than 8 flights per year'. Eight business flights so far this year, so this would be the ninth. The text does not say whether the number is an expectation for budgeting (book business) or a limit (economy, or a CEO exception, lines 151-152); the flight is under 7 hours, so no other row gives business. Lines 150-151: in doubt over the class, consult the DCS. Hold the business fare or the economy fare."
+}

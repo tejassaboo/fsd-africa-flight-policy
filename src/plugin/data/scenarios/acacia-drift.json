@@ -1,0 +1,169 @@
+{
+  "id": "acacia-drift",
+  "category": "easy",
+  "overlays": [
+    "multi_leg",
+    "dearer_option",
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Nairobi to Paris on 2 February for the meeting with the development finance institutions the next afternoon. Economy is fine for this one; I'd rather keep the emissions down.",
+  "trip": {
+    "traveller_name": "Lucy Njeri",
+    "traveller_title": "Senior Manager, Financial Inclusion",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 6,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "CDG",
+    "travel_date": "2027-02-02",
+    "booking_date": "2027-01-11",
+    "work_starts": "2027-02-03 15:00",
+    "purpose": "Meeting with development finance institutions in Paris",
+    "purpose_kind": "PARTNER_MEETING",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Evans Mwangi",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "CDG",
+        "date": "2027-02-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "airfrance": {
+            "carrier": "AF",
+            "depart": "23:30"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "22:50"
+          },
+          "istanbul": {
+            "carrier": "TK",
+            "via": [
+              "IST"
+            ],
+            "depart": "03:35",
+            "layovers": [
+              90
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "airfrance-economy",
+            "flight": "airfrance",
+            "cabin": "ECONOMY",
+            "fare_cents": 56000
+          },
+          {
+            "slot": "airfrance-business",
+            "flight": "airfrance",
+            "cabin": "BUSINESS",
+            "fare_cents": 268000
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 59000
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 255000
+          },
+          {
+            "slot": "istanbul-economy",
+            "flight": "istanbul",
+            "cabin": "ECONOMY",
+            "fare_cents": 46500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "airfrance-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "DIRECT_FLIGHT_PREFERRED",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION",
+      "OPERATING_PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        118,
+        118
+      ],
+      "sha256": "39bd906b4ce265442df69f6443c5307d653bee6c221729a881ae29d8855d3111",
+      "quote": "The default class of travel for all flights is Economy.",
+      "why": "the default class for all flights is economy"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    },
+    {
+      "lines": [
+        107,
+        110
+      ],
+      "sha256": "adbdc726d1c40508f3135fe549f9e9fc38d609bdb62bbe636c52a595e8f68766",
+      "quote": "c) Premium Economy/Business class air travel is permitted on long flights as defined in section 3.1 of this policy. Even in cases where premium economy/ business class is permitted by this policy, staff may choose a lower class of travel at thei r own discretion, always being mindful of the requirement to reduce emissions wherever possibl e.",
+      "why": "premium economy/business on long flights; staff may choose a lower class"
+    },
+    {
+      "lines": [
+        134,
+        136
+      ],
+      "sha256": "694de0eed437f9f67b56674fb673f02ee48cdfb3c87629e7d9636f4ceeadd8b9",
+      "quote": "Intercontinental flights of more than 7 hours' duration for employees in JG6 and above Business",
+      "why": "intercontinental flights of more than 7 hours for JG6 and above: business"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "JG6 on an intercontinental flight of 495 minutes may fly business (lines 134-136), but lines 108-110 let staff choose a lower class. Economy at the lowest cost direct flight (lines 119-121): Air France, not the cheaper Istanbul connection."
+}

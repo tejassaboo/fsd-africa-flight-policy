@@ -1,0 +1,162 @@
+{
+  "id": "namib-orchard",
+  "category": "hidden_clause",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class from London to Nairobi on 12 April if the policy allows it; otherwise economy. The all-staff retreat starts at nine the next morning.",
+  "trip": {
+    "traveller_name": "Sarah Okafor",
+    "traveller_title": "Senior Manager, Research (remote, London)",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 7,
+    "works_remotely": true,
+    "exco_or_board_member": false,
+    "origin": "LHR",
+    "destination": "NBO",
+    "travel_date": "2027-04-12",
+    "booking_date": "2027-03-22",
+    "work_starts": "2027-04-13 09:00",
+    "purpose": "FSD Africa all-staff retreat in Nairobi",
+    "purpose_kind": "STAFF_EVENT",
+    "requested_cabin": "BUSINESS",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Mark Napier",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "NBO",
+        "date": "2027-04-12",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "19:30"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "20:45"
+          },
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "17:05",
+            "minutes": [
+              80,
+              505
+            ],
+            "layovers": [
+              90
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 60500
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 290000
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 58500
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 305000
+          },
+          {
+            "slot": "amsterdam-economy",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 49000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ECONOMY_CLASS_LIMIT",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        138,
+        140
+      ],
+      "sha256": "5f584a8438f7fda6d868dcd3c5b88b078a8878ab9e6456085b2121e4b07ace34",
+      "quote": "Remote workers travelling to attend work events, regardless of country of residence Economy",
+      "why": "remote workers travelling to attend work events: economy"
+    },
+    {
+      "lines": [
+        134,
+        136
+      ],
+      "sha256": "694de0eed437f9f67b56674fb673f02ee48cdfb3c87629e7d9636f4ceeadd8b9",
+      "quote": "Intercontinental flights of more than 7 hours' duration for employees in JG6 and above Business",
+      "why": "intercontinental flights of more than 7 hours for JG6 and above: business"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "JG7 on a 520-minute intercontinental flight would get business (lines 134-136), but the traveller is a remote worker travelling to a work event: economy 'regardless of country of residence' (lines 138-140). The lowest cost direct economy fare: Kenya Airways (lines 119-121)."
+}

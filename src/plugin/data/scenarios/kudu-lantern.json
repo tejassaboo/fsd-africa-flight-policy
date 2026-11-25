@@ -1,0 +1,155 @@
+{
+  "id": "kudu-lantern",
+  "category": "easy",
+  "overlays": [
+    "dearer_option",
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Nairobi to Frankfurt on 19 January for the green bond conference. Premium economy please; I don't need business.",
+  "trip": {
+    "traveller_name": "Daniel Mutua",
+    "traveller_title": "Head of Climate Finance",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 8,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "FRA",
+    "travel_date": "2027-01-19",
+    "booking_date": "2026-12-21",
+    "work_starts": "2027-01-20 14:00",
+    "purpose": "Green bond conference in Frankfurt",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "PREMIUM_ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Mark Napier",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "FRA",
+        "date": "2027-01-19",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "lufthansa": {
+            "carrier": "LH",
+            "depart": "22:40"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "23:55"
+          }
+        },
+        "offers": [
+          {
+            "slot": "lufthansa-economy",
+            "flight": "lufthansa",
+            "cabin": "ECONOMY",
+            "fare_cents": 61000
+          },
+          {
+            "slot": "lufthansa-premium",
+            "flight": "lufthansa",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 118000
+          },
+          {
+            "slot": "lufthansa-business",
+            "flight": "lufthansa",
+            "cabin": "BUSINESS",
+            "fare_cents": 285000
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 58500
+          },
+          {
+            "slot": "kenya-premium",
+            "flight": "kenya",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 112500
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 271000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-premium"
+    ],
+    "cabins": [
+      "PREMIUM_ECONOMY"
+    ],
+    "reason_codes": [
+      "INTERNATIONAL_LONG_FLIGHT",
+      "PREMIUM_ECONOMY_ALLOWED"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION",
+      "OPERATING_PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        134,
+        136
+      ],
+      "sha256": "694de0eed437f9f67b56674fb673f02ee48cdfb3c87629e7d9636f4ceeadd8b9",
+      "quote": "Intercontinental flights of more than 7 hours' duration for employees in JG6 and above Business",
+      "why": "intercontinental flights of more than 7 hours for JG6 and above: business"
+    },
+    {
+      "lines": [
+        107,
+        110
+      ],
+      "sha256": "adbdc726d1c40508f3135fe549f9e9fc38d609bdb62bbe636c52a595e8f68766",
+      "quote": "c) Premium Economy/Business class air travel is permitted on long flights as defined in section 3.1 of this policy. Even in cases where premium economy/ business class is permitted by this policy, staff may choose a lower class of travel at thei r own discretion, always being mindful of the requirement to reduce emissions wherever possibl e.",
+      "why": "premium economy/business on long flights; staff may choose a lower class"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "An intercontinental flight of 480 minutes for a JG8 employee: business is the maximum (lines 134-136). Lines 107-110 permit premium economy on long flights and let staff choose a lower class, so the premium economy the traveller asks for; the cheaper direct fare is Kenya Airways."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "fsd-africa-flight-policy",
+  "name": "FSD Africa Travel Policy Flight Booking",
+  "slug": "fsd-africa",
+  "title": "FSD Africa Travel & Expense Policy, version 4.0 (CORP-POL-006, effective 6 March 2024)",
+  "frozen_file": "fsd-africa_policy.txt",
+  "sha256": "ba74787a0952b21057dbc5055893091fc6759474ed298ff25771fdf056a366c8",
+  "raw_pdf_sha256": "ee2f833c72696a5172e80c123509a665e702237a67a001046032c6b4dbb3f082",
+  "words": 3143,
+  "lines": 310,
+  "source": "not recorded locally (UNVERIFIED); the raw PDF pilot_work/originals/fsd-africa/raw_fsd-africa.pdf is the pinned copy",
+  "frozen_on": "2026-11-24",
+  "scenario_count": 24,
+  "currency": "GBP",
+  "background_offers": 0
+}

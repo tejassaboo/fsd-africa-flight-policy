@@ -1,0 +1,113 @@
+{
+  "id": "rooibos-haven",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Can FSD book my flight from Nairobi to Johannesburg on 21 December? It's our family Christmas holiday; I'll sort out the cost later.",
+  "trip": {
+    "traveller_name": "Alice Wairimu",
+    "traveller_title": "Communications Officer",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 5,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "JNB",
+    "travel_date": "2026-12-21",
+    "booking_date": "2026-11-24",
+    "work_starts": "",
+    "purpose": "Family Christmas holiday in Johannesburg",
+    "purpose_kind": "PERSONAL",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "JNB",
+        "date": "2026-12-21",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "08:30"
+          },
+          "southafrican": {
+            "carrier": "SA",
+            "depart": "13:10"
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 39000
+          },
+          {
+            "slot": "southafrican-economy",
+            "flight": "southafrican",
+            "cabin": "ECONOMY",
+            "fare_cents": 41500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "EXPENSES",
+      "NON_REIMBURSABLE",
+      "POLICY_STATEMENT"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        242,
+        242
+      ],
+      "sha256": "02fce336df5e507e46d237971f3b1dac77719cef271d7498d13b14168703f91f",
+      "quote": "• Non-business travel expenses",
+      "why": "non-business travel expenses are not reimbursed"
+    },
+    {
+      "lines": [
+        71,
+        72
+      ],
+      "sha256": "6ad9b7ecc21e2cf79e54c43918be106e7414415296ccdd0594f95dee8ca579f3",
+      "quote": "It is the responsibility of all personnel to ensure tha t travel and expenses are both reasonable and necessary for the conduct of FSD Africa 's business and to comply with the provisions of this policy.",
+      "why": "travel must be reasonable and necessary for FSD Africa's business"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 242: non-business travel expenses are not reimbursed; lines 71-72: travel must be necessary for FSD Africa's business. A family holiday is no business trip: FSD Africa buys no ticket."
+}

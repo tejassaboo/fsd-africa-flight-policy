@@ -1,0 +1,157 @@
+{
+  "id": "zebu-lagoon",
+  "category": "flag",
+  "overlays": [
+    "unclear_phrase"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "sisal-harbour",
+    "ibis-causeway"
+  ],
+  "ambiguity_note": {
+    "phrase": "All flights within Africa",
+    "readings": [
+      "the within-Africa row caps every flight in Africa at economy, a director's too",
+      "the director row is specific to the person: an executive director flies business"
+    ]
+  },
+  "request": "Business class from Nairobi to Johannesburg on 18 January please, for the meeting with the regulator the next morning.",
+  "trip": {
+    "traveller_name": "Wanjiru Mbugua",
+    "traveller_title": "Executive Director, Board member",
+    "role": "EXECUTIVE_DIRECTOR",
+    "accompanies": "",
+    "job_grade": 0,
+    "works_remotely": false,
+    "exco_or_board_member": true,
+    "origin": "NBO",
+    "destination": "JNB",
+    "travel_date": "2027-01-18",
+    "booking_date": "2026-12-21",
+    "work_starts": "2027-01-19 09:00",
+    "purpose": "Meeting with the South African financial regulator",
+    "purpose_kind": "PARTNER_MEETING",
+    "requested_cabin": "BUSINESS",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "JNB",
+        "date": "2027-01-18",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "08:30"
+          },
+          "southafrican": {
+            "carrier": "SA",
+            "depart": "13:10"
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 38500
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 115000
+          },
+          {
+            "slot": "southafrican-economy",
+            "flight": "southafrican",
+            "cabin": "ECONOMY",
+            "fare_cents": 41200
+          },
+          {
+            "slot": "southafrican-business",
+            "flight": "southafrican",
+            "cabin": "BUSINESS",
+            "fare_cents": 124000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "kenya-business",
+      "kenya-economy"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "CHIEF_EXECUTIVE",
+      "DIRECTOR_CORPORATE_SERVICES",
+      "NOT_NAMED"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION",
+      "OPERATING_PRINCIPLES"
+    ],
+    "unclear_phrase": "All flights within Africa"
+  },
+  "must_keep": [
+    {
+      "lines": [
+        128,
+        128
+      ],
+      "sha256": "f6f8dd853347f8768a53f3c210ade25f0500ee522b2c1e6b2db999505bce3c5c",
+      "quote": "All flights within Africa Economy",
+      "why": "all flights within Africa: economy"
+    },
+    {
+      "lines": [
+        132,
+        133
+      ],
+      "sha256": "9e1edb1e96541e278d16296d660ff9833cc8ff4d79f9cd0a9e5e3d36cd302ee4",
+      "quote": "Executive directors Business (not expected to be more than 8 flights per year)",
+      "why": "executive directors: business, not expected to be more than 8 flights a year"
+    },
+    {
+      "lines": [
+        124,
+        127
+      ],
+      "sha256": "de08c9c05e5658d95a3581d2da58f6aaf2eeb90db00fd219a1b066548484dcb0",
+      "quote": "While the expectation is for economy travel, the table b elow sets out the conditions of travel for flights. It should be understood that approval of a higher class of travel will depend on the time of flights being taken and the activities being undert aken on arrival. Description Maximum permitted class of travel",
+      "why": "the class table: maximum permitted class by description"
+    },
+    {
+      "lines": [
+        150,
+        152
+      ],
+      "sha256": "2aa3c6c0cb0cc633d9890b328f92ebea4babf52ce137534c2936e3af47b5ab71",
+      "quote": "Where there is any doubt as to whether to book a particular class of travel or hotel etc., all personnel must consult with the DCS in advance. Exceptions to the classes of travel described above will need to be approved by the CEO.",
+      "why": "in doubt over the class, consult the DCS in advance; class exceptions need the CEO"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The class table gives each row a 'Maximum permitted class': 'All flights within Africa' economy (line 128), and executive directors business (lines 132-133; no earlier business flight this year). Both rows describe this flight and the table gives no order between them. Lines 150-151: where there is any doubt over the class, consult the DCS in advance. Hold the business fare or the economy fare."
+}

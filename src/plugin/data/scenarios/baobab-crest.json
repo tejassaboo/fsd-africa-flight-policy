@@ -1,0 +1,147 @@
+{
+  "id": "baobab-crest",
+  "category": "easy",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I need to fly from Nairobi to Johannesburg on 8 December for the pension-fund workshop the next morning. Economy is fine.",
+  "trip": {
+    "traveller_name": "Brian Kamau",
+    "traveller_title": "Programme Officer, Capital Markets",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 4,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "JNB",
+    "travel_date": "2026-12-08",
+    "booking_date": "2026-11-24",
+    "work_starts": "2026-12-09 09:00",
+    "purpose": "Pension-fund workshop with a South African partner",
+    "purpose_kind": "PARTNER_MEETING",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Grace Wambui",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "JNB",
+        "date": "2026-12-08",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "morning": {
+            "carrier": "KQ",
+            "depart": "08:30"
+          },
+          "midday": {
+            "carrier": "SA",
+            "depart": "13:10"
+          },
+          "evening": {
+            "carrier": "KQ",
+            "depart": "18:45"
+          }
+        },
+        "offers": [
+          {
+            "slot": "morning-economy",
+            "flight": "morning",
+            "cabin": "ECONOMY",
+            "fare_cents": 38500
+          },
+          {
+            "slot": "midday-economy",
+            "flight": "midday",
+            "cabin": "ECONOMY",
+            "fare_cents": 41200
+          },
+          {
+            "slot": "evening-economy",
+            "flight": "evening",
+            "cabin": "ECONOMY",
+            "fare_cents": 39900
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "morning-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "DIRECT_FLIGHT_PREFERRED",
+      "LOWEST_FARE",
+      "ECONOMY_CLASS_LIMIT"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        118,
+        118
+      ],
+      "sha256": "39bd906b4ce265442df69f6443c5307d653bee6c221729a881ae29d8855d3111",
+      "quote": "The default class of travel for all flights is Economy.",
+      "why": "the default class for all flights is economy"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    },
+    {
+      "lines": [
+        128,
+        128
+      ],
+      "sha256": "f6f8dd853347f8768a53f3c210ade25f0500ee522b2c1e6b2db999505bce3c5c",
+      "quote": "All flights within Africa Economy",
+      "why": "all flights within Africa: economy"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        145,
+        146
+      ],
+      "quote": "with travel approved by the pillar head",
+      "why": "the routine trip approval, on file"
+    }
+  ],
+  "design_notes": "A flight within Africa in economy (lines 118, 128); every offer is a nonstop, so the lowest cost direct flight (lines 119-121) is the 08:30 Kenya Airways fare. The pillar head's trip approval is routine (lines 145-146)."
+}

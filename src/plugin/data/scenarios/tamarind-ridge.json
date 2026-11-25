@@ -1,0 +1,141 @@
+{
+  "id": "tamarind-ridge",
+  "category": "boundary_twin",
+  "overlays": [
+    "dearer_option",
+    "multi_leg"
+  ],
+  "twin_of": "cassava-ledge",
+  "twin_fact": "nonstop scheduled at 421 or 420 minutes",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class from Nairobi to Rome on 26 January if the policy allows it for this flight; if not, economy. I'm presenting to investors in Rome the next morning.",
+  "trip": {
+    "traveller_name": "Otieno Odhiambo",
+    "traveller_title": "Senior Investment Manager",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 8,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "FCO",
+    "travel_date": "2027-01-26",
+    "booking_date": "2027-01-05",
+    "work_starts": "2027-01-27 09:30",
+    "purpose": "Investor presentation in Rome",
+    "purpose_kind": "PARTNER_MEETING",
+    "requested_cabin": "BUSINESS",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Mark Napier",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "FCO",
+        "date": "2027-01-26",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "09:05",
+            "minutes": [
+              421
+            ]
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "03:30",
+            "minutes": [
+              285,
+              335
+            ],
+            "layovers": [
+              110
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 52000
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 219000
+          },
+          {
+            "slot": "dubai-economy",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 44500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "INTERNATIONAL_LONG_FLIGHT",
+      "LONG_FLIGHT_APPROVED",
+      "SENIOR_ROLE_ENTITLEMENT"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        134,
+        136
+      ],
+      "sha256": "694de0eed437f9f67b56674fb673f02ee48cdfb3c87629e7d9636f4ceeadd8b9",
+      "quote": "Intercontinental flights of more than 7 hours' duration for employees in JG6 and above Business",
+      "why": "intercontinental flights of more than 7 hours for JG6 and above: business"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The Kenya Airways nonstop is scheduled at 421 minutes: more than 7 hours, intercontinental, JG8, so business (lines 134-136); the only business fare is the direct one."
+}

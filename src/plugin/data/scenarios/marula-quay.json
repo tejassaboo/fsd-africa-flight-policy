@@ -1,0 +1,160 @@
+{
+  "id": "marula-quay",
+  "category": "easy",
+  "overlays": [
+    "multi_leg"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Nairobi to Edinburgh on 12 January for the investor conference the next day, economy please.",
+  "trip": {
+    "traveller_name": "Peter Ouma",
+    "traveller_title": "Programme Associate",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 4,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "EDI",
+    "travel_date": "2027-01-12",
+    "booking_date": "2026-12-15",
+    "work_starts": "2027-01-13 13:00",
+    "purpose": "Investor conference in Edinburgh",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Grace Wambui",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "EDI",
+        "date": "2027-01-12",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "london": {
+            "carrier": "BA",
+            "via": [
+              "LHR"
+            ],
+            "depart": "23:05",
+            "minutes": [
+              520,
+              85
+            ],
+            "layovers": [
+              75
+            ]
+          },
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "23:40",
+            "minutes": [
+              505,
+              95
+            ],
+            "layovers": [
+              80
+            ]
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "05:10",
+            "minutes": [
+              285,
+              450
+            ],
+            "layovers": [
+              120
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "london-economy",
+            "flight": "london",
+            "cabin": "ECONOMY",
+            "fare_cents": 54000
+          },
+          {
+            "slot": "amsterdam-economy",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 49800
+          },
+          {
+            "slot": "dubai-economy",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 57500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "amsterdam-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "DIRECT_FLIGHT_PREFERRED",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        118,
+        118
+      ],
+      "sha256": "39bd906b4ce265442df69f6443c5307d653bee6c221729a881ae29d8855d3111",
+      "quote": "The default class of travel for all flights is Economy.",
+      "why": "the default class for all flights is economy"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Economy (line 118). No direct flight is listed, so the principle of lines 119-121 falls back to the lowest cost flight: the KLM connection via Amsterdam."
+}

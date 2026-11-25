@@ -1,0 +1,178 @@
+{
+  "id": "okapi-bridge",
+  "category": "distractor",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Nairobi to Amsterdam on 23 March for the evaluation workshop the next afternoon. I'd like lounge access and a seat with more legroom if that's allowed; otherwise book whatever the policy allows.",
+  "trip": {
+    "traveller_name": "Ian Fraser",
+    "traveller_title": "Independent evaluation consultant",
+    "role": "CONSULTANT",
+    "accompanies": "",
+    "job_grade": 0,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "AMS",
+    "travel_date": "2027-03-23",
+    "booking_date": "2027-03-01",
+    "work_starts": "2027-03-24 14:00",
+    "purpose": "Programme evaluation workshop in Amsterdam",
+    "purpose_kind": "PROGRAMME_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Evans Mwangi",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "AMS",
+        "date": "2027-03-23",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "klm": {
+            "carrier": "KL",
+            "depart": "08:25"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "23:35"
+          },
+          "istanbul": {
+            "carrier": "TK",
+            "via": [
+              "IST"
+            ],
+            "depart": "04:15",
+            "layovers": [
+              95
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "klm-economy",
+            "flight": "klm",
+            "cabin": "ECONOMY",
+            "fare_cents": 57000
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 54500
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 236000
+          },
+          {
+            "slot": "istanbul-economy",
+            "flight": "istanbul",
+            "cabin": "ECONOMY",
+            "fare_cents": 46000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "DIRECT_FLIGHT_PREFERRED",
+      "LOWEST_FARE",
+      "ECONOMY_CLASS_LIMIT"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        129,
+        129
+      ],
+      "sha256": "f06e89881e3cfd5f6b3770c54aecc9a594af4bab569c517fdf62600b798dd03c",
+      "quote": "All consultants' travel Economy",
+      "why": "all consultants' travel: economy"
+    },
+    {
+      "lines": [
+        118,
+        118
+      ],
+      "sha256": "39bd906b4ce265442df69f6443c5307d653bee6c221729a881ae29d8855d3111",
+      "quote": "The default class of travel for all flights is Economy.",
+      "why": "the default class for all flights is economy"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        143,
+        144
+      ],
+      "quote": "For flights of more than 4 hours' duration, access to airport lounges and booking of seats with greater legroom in Economy is allowable.",
+      "why": "a lounge and an extra-legroom economy seat, not a higher class"
+    },
+    {
+      "lines": [
+        239,
+        240
+      ],
+      "quote": "Fees or dues for airline VIP lounges (except for flights of more than 4 hours' duration, as above)",
+      "why": "a lounge fee rule, not a fare rule"
+    },
+    {
+      "lines": [
+        148,
+        149
+      ],
+      "quote": "Costs of consultants' and invited guests' travel will be itemised within project budgets",
+      "why": "how consultants' travel is budgeted, not its class"
+    }
+  ],
+  "design_notes": "All consultants' travel is economy (line 129). Lines 143-144 allow a lounge and an extra-legroom economy seat on a flight of more than 4 hours, which is a seat choice inside economy, not a class. The lowest cost direct economy fare: Kenya Airways (lines 119-121), not the cheaper Istanbul connection."
+}

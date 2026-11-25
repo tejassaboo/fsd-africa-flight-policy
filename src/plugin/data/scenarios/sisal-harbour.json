@@ -1,0 +1,142 @@
+{
+  "id": "sisal-harbour",
+  "category": "easy",
+  "overlays": [
+    "dearer_option",
+    "date_arithmetic"
+  ],
+  "twin_of": "umbra-kopje",
+  "twin_fact": "earlier business flights this year: 7 or 8",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class from Nairobi to Dubai on 14 December please, for the co-investment talks the next morning.",
+  "trip": {
+    "traveller_name": "Wanjiru Mbugua",
+    "traveller_title": "Executive Director, Board member",
+    "role": "EXECUTIVE_DIRECTOR",
+    "accompanies": "",
+    "job_grade": 0,
+    "works_remotely": false,
+    "exco_or_board_member": true,
+    "origin": "NBO",
+    "destination": "DXB",
+    "travel_date": "2026-12-14",
+    "booking_date": "2026-11-24",
+    "work_starts": "2026-12-15 09:30",
+    "purpose": "Co-investment talks with a Gulf development fund in Dubai",
+    "purpose_kind": "PARTNER_MEETING",
+    "requested_cabin": "BUSINESS",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [
+      "2026-01-21",
+      "2026-02-24",
+      "2026-04-08",
+      "2026-05-19",
+      "2026-07-07",
+      "2026-09-15",
+      "2026-10-27"
+    ],
+    "colleagues_booked": [],
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "DXB",
+        "date": "2026-12-14",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "emirates": {
+            "carrier": "EK",
+            "depart": "10:20"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "16:45"
+          }
+        },
+        "offers": [
+          {
+            "slot": "emirates-economy",
+            "flight": "emirates",
+            "cabin": "ECONOMY",
+            "fare_cents": 43000
+          },
+          {
+            "slot": "emirates-business",
+            "flight": "emirates",
+            "cabin": "BUSINESS",
+            "fare_cents": 162000
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 45500
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 158000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "SENIOR_ROLE_ENTITLEMENT"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        132,
+        133
+      ],
+      "sha256": "9e1edb1e96541e278d16296d660ff9833cc8ff4d79f9cd0a9e5e3d36cd302ee4",
+      "quote": "Executive directors Business (not expected to be more than 8 flights per year)",
+      "why": "executive directors: business, not expected to be more than 8 flights a year"
+    },
+    {
+      "lines": [
+        124,
+        127
+      ],
+      "sha256": "de08c9c05e5658d95a3581d2da58f6aaf2eeb90db00fd219a1b066548484dcb0",
+      "quote": "While the expectation is for economy travel, the table b elow sets out the conditions of travel for flights. It should be understood that approval of a higher class of travel will depend on the time of flights being taken and the activities being undert aken on arrival. Description Maximum permitted class of travel",
+      "why": "the class table: maximum permitted class by description"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "An executive director may fly business, 'not expected to be more than 8 flights per year' (lines 132-133). Seven business flights so far this year, so this is the eighth: within the number. The flight is under 7 hours, so the director row alone grants business. Cheapest direct business fare: Kenya Airways."
+}

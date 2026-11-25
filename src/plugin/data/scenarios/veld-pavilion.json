@@ -1,0 +1,133 @@
+{
+  "id": "veld-pavilion",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section",
+    "multi_traveller"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book my husband on the same flight as me from Nairobi to London on 11 January; he's coming along for the week while I'm at the conference.",
+  "trip": {
+    "traveller_name": "James Otieno",
+    "traveller_title": "Husband of Achieng Otieno, Programme Manager",
+    "role": "RELATIVE_OF_STAFF",
+    "accompanies": "Achieng Otieno",
+    "job_grade": 0,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "LHR",
+    "travel_date": "2027-01-11",
+    "booking_date": "2026-12-14",
+    "work_starts": "",
+    "purpose": "Accompanying his wife on her conference trip",
+    "purpose_kind": "PERSONAL",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "LHR",
+        "date": "2027-01-11",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "23:15"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "22:05"
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "04:00",
+            "minutes": [
+              285,
+              420
+            ],
+            "layovers": [
+              120
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 54000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 57500
+          },
+          {
+            "slot": "dubai-economy",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 47000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "COMPANION_NOT_COVERED",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "EXPENSES",
+      "NON_REIMBURSABLE"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        243,
+        243
+      ],
+      "sha256": "73ccc66fe5b1eee6481a9d76e837c95fcb9e7847d51eff417725062ec38ad8b5",
+      "quote": "• Costs for personal guests",
+      "why": "costs for personal guests are not reimbursed"
+    },
+    {
+      "lines": [
+        242,
+        242
+      ],
+      "sha256": "02fce336df5e507e46d237971f3b1dac77719cef271d7498d13b14168703f91f",
+      "quote": "• Non-business travel expenses",
+      "why": "non-business travel expenses are not reimbursed"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 243: costs for personal guests are not reimbursed, nor non-business travel expenses (line 242). FSD Africa buys no ticket for a staff member's husband."
+}

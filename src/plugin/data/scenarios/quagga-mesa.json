@@ -1,0 +1,180 @@
+{
+  "id": "quagga-mesa",
+  "category": "distractor",
+  "overlays": [
+    "date_arithmetic",
+    "month_end",
+    "dearer_option",
+    "multi_leg"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm in London and need to be in Nairobi for the 9am workshop on Tuesday 1 December. Please book the cheapest way on Monday 30 November; I'll go straight from the airport to the workshop.",
+  "trip": {
+    "traveller_name": "Moses Kirui",
+    "traveller_title": "Programme Officer, Agriculture Finance",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 4,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "LHR",
+    "destination": "NBO",
+    "travel_date": "2026-11-30",
+    "booking_date": "2026-11-24",
+    "work_starts": "2026-12-01 09:00",
+    "purpose": "Agriculture finance workshop in Nairobi",
+    "purpose_kind": "PROGRAMME_WORK",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Grace Wambui",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "NBO",
+        "date": "2026-11-30",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "19:30"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "21:40"
+          },
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "18:00",
+            "minutes": [
+              80,
+              505
+            ],
+            "layovers": [
+              90
+            ]
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "20:15",
+            "minutes": [
+              420,
+              285
+            ],
+            "layovers": [
+              130
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 63500
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 55500
+          },
+          {
+            "slot": "amsterdam-economy",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 51000
+          },
+          {
+            "slot": "dubai-economy",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 47500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "british-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "DIRECT_FLIGHT_PREFERRED",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        118,
+        118
+      ],
+      "sha256": "39bd906b4ce265442df69f6443c5307d653bee6c221729a881ae29d8855d3111",
+      "quote": "The default class of travel for all flights is Economy.",
+      "why": "the default class for all flights is economy"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        141,
+        142
+      ],
+      "quote": "Allowance may be made for an extra night in-country in the case of long-distance travel ahead of next-day work commitments.",
+      "why": "a hotel night, not the flight"
+    },
+    {
+      "lines": [
+        168,
+        169
+      ],
+      "quote": "Airport transfers from UK, European or US airports, except w here services are very infrequent",
+      "why": "an airport-transfer rule, not a flight rule"
+    }
+  ],
+  "design_notes": "Economy (JG4, line 118). The Kenya Airways nonstop lands at 09:20 on 1 December and the Dubai connection later, both after the 09:00 workshop; the lowest cost direct flight that gets the traveller there is BA, landing at 07:10 (lines 119-121), not the cheaper KLM connection. The extra night in-country of lines 141-142 is a hotel allowance the traveller does not want; it does not change the flight."
+}

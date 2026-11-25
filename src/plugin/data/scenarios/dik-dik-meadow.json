@@ -1,0 +1,141 @@
+{
+  "id": "dik-dik-meadow",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "fynbos-gate",
+  "twin_fact": "the nonstops' economy seats are available or sold out",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me economy from Nairobi to Dubai on 7 January for the fintech conference, which opens the next morning.",
+  "trip": {
+    "traveller_name": "Faith Chepkoech",
+    "traveller_title": "Finance Assistant",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 3,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "DXB",
+    "travel_date": "2027-01-07",
+    "booking_date": "2026-12-14",
+    "work_starts": "2027-01-08 09:00",
+    "purpose": "Africa fintech conference in Dubai",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Samuel Kiprono",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "DXB",
+        "date": "2027-01-07",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "emirates": {
+            "carrier": "EK",
+            "depart": "10:20"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "16:45"
+          },
+          "doha": {
+            "carrier": "QR",
+            "via": [
+              "DOH"
+            ],
+            "depart": "01:55",
+            "minutes": [
+              270,
+              60
+            ],
+            "layovers": [
+              75
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "emirates-economy",
+            "flight": "emirates",
+            "cabin": "ECONOMY",
+            "fare_cents": 41000
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 44500
+          },
+          {
+            "slot": "doha-economy",
+            "flight": "doha",
+            "cabin": "ECONOMY",
+            "fare_cents": 35200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "emirates-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "DIRECT_FLIGHT_PREFERRED",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        118,
+        118
+      ],
+      "sha256": "39bd906b4ce265442df69f6443c5307d653bee6c221729a881ae29d8855d3111",
+      "quote": "The default class of travel for all flights is Economy.",
+      "why": "the default class for all flights is economy"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Economy (line 118). Two nonstops have seats, so direct flights are readily available: the lowest cost direct flight is Emirates (lines 119-121), not the cheaper Qatar connection via Doha."
+}

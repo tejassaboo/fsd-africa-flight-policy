@@ -1,0 +1,169 @@
+{
+  "id": "lobelia-spur",
+  "category": "hidden_clause",
+  "overlays": [
+    "multi_traveller",
+    "outside_air_section",
+    "dearer_option",
+    "date_arithmetic"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Business class from London to Nairobi on 15 March please, for the Board meeting at ten the next morning. Three of my Board colleagues are already booked on the BA evening flight.",
+  "trip": {
+    "traveller_name": "Helen Ashworth",
+    "traveller_title": "Non-executive director",
+    "role": "NON_EXECUTIVE_DIRECTOR",
+    "accompanies": "",
+    "job_grade": 0,
+    "works_remotely": false,
+    "exco_or_board_member": true,
+    "origin": "LHR",
+    "destination": "NBO",
+    "travel_date": "2027-03-15",
+    "booking_date": "2027-02-22",
+    "work_starts": "2027-03-16 10:00",
+    "purpose": "FSD Africa Board meeting in Nairobi",
+    "purpose_kind": "BOARD_MEETING",
+    "requested_cabin": "BUSINESS",
+    "wants_flexible_fare": false,
+    "dates_may_move": false,
+    "earlier_business_flights": [
+      "2027-01-20"
+    ],
+    "colleagues_booked": [
+      {
+        "carrier": "British Airways",
+        "depart_local": "2027-03-15 19:30",
+        "members": 3
+      }
+    ],
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "NBO",
+        "date": "2027-03-15",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "19:30"
+          },
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "20:45"
+          },
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "17:05",
+            "minutes": [
+              80,
+              505
+            ],
+            "layovers": [
+              90
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 61000
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 295000
+          },
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 59000
+          },
+          {
+            "slot": "kenya-business",
+            "flight": "kenya",
+            "cabin": "BUSINESS",
+            "fare_cents": 312000
+          },
+          {
+            "slot": "amsterdam-business",
+            "flight": "amsterdam",
+            "cabin": "BUSINESS",
+            "fare_cents": 270000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "DIRECT_FLIGHT_PREFERRED",
+      "INTERNATIONAL_LONG_FLIGHT",
+      "SENIOR_ROLE_ENTITLEMENT",
+      "TRAVELLER_LIMIT_PER_FLIGHT"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION",
+      "GROUP_TRAVEL",
+      "SAFETY_AND_SECURITY"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        130,
+        131
+      ],
+      "sha256": "84045e5cd2724924796a7ea1c3d9300a7fc4b187e0886a545e3c964e22e26ccb",
+      "quote": "Non-executive directors Business (not expected to be more than 3 flights per year)",
+      "why": "non-executive directors: business, not expected to be more than 3 flights a year"
+    },
+    {
+      "lines": [
+        277,
+        279
+      ],
+      "sha256": "1ff9fece3428c9e283cdbee1b482bf3777a9a3b03f3db00504606e204b18ce33",
+      "quote": "FSD Africa is mindful of the risks to continuity of busi ness associated with large groups of staff travelling together. Where possible, no more than three members of FSD Africa's Executive Committee or Board should travel together on the same flig ht.",
+      "why": "where possible, no more than three ExCo or Board members on the same flight"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A non-executive director may fly business (lines 130-131; this is her second business flight of the year, within the 3 expected). Three Board members are already on the BA 19:30 nonstop, and lines 277-279 ask that no more than three ExCo or Board members travel on the same flight where possible: the Kenya Airways 20:45 nonstop is possible and lands at 08:25, in time. Lowest cost direct (lines 119-121): not the cheaper KLM connection."
+}

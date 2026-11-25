@@ -1,0 +1,169 @@
+{
+  "id": "guava-terrace",
+  "category": "multi_rule",
+  "overlays": [
+    "multi_leg"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Could you get me a ticket from Nairobi to London on 2 March that I can change or refund for free, just in case? If that needs a sign-off I don't have, book what the policy allows; I have to be at the conference the next afternoon.",
+  "trip": {
+    "traveller_name": "Collins Kiplagat",
+    "traveller_title": "Programme Associate",
+    "role": "STAFF",
+    "accompanies": "",
+    "job_grade": 4,
+    "works_remotely": false,
+    "exco_or_board_member": false,
+    "origin": "NBO",
+    "destination": "LHR",
+    "travel_date": "2027-03-02",
+    "booking_date": "2027-02-08",
+    "work_starts": "2027-03-03 14:00",
+    "purpose": "Conference on African capital markets in London",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "wants_flexible_fare": true,
+    "dates_may_move": false,
+    "earlier_business_flights": [],
+    "colleagues_booked": [],
+    "sign_offs": [
+      {
+        "role": "PILLAR_HEAD",
+        "name": "Grace Wambui",
+        "subject": "TRIP"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "NBO",
+        "destination": "LHR",
+        "date": "2027-03-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "kenya": {
+            "carrier": "KQ",
+            "depart": "23:15"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "22:05"
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "04:00",
+            "minutes": [
+              285,
+              420
+            ],
+            "layovers": [
+              120
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "kenya-economy",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 54000
+          },
+          {
+            "slot": "kenya-flex",
+            "flight": "kenya",
+            "cabin": "ECONOMY",
+            "fare_cents": 89000,
+            "refundable": true
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 57500
+          },
+          {
+            "slot": "british-flex",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 93500,
+            "refundable": true
+          },
+          {
+            "slot": "dubai-economy",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 47000
+          },
+          {
+            "slot": "dubai-flex",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 78000,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "kenya-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "REFUNDABLE_FARE_NOT_ALLOWED"
+    ],
+    "approvers": [
+      "NONE",
+      "PILLAR_HEAD"
+    ],
+    "clauses": [
+      "AIR_TRAVEL",
+      "TRANSPORTATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        122,
+        123
+      ],
+      "sha256": "a52350524a9c3051b64cd55521007de450b52f0807159a396869fb82b88d9d10",
+      "quote": "Fully flexible tickets are permitted only in excepti onal circumstances and only with approval from the DCS and CFO in advance of booking.",
+      "why": "fully flexible tickets only in exceptional circumstances, with DCS and CFO approval before booking"
+    },
+    {
+      "lines": [
+        119,
+        121
+      ],
+      "sha256": "b74f7a8bb5d8f1575c69208f7722a6b3c1a8d39f0a0e334fcacd6d6985b111a2",
+      "quote": "Flights are to be booked via FSD Africa 's selected travel services provider and be based on the principle of the lowest cost direct flight consistent w ith this policy (where direct flights are readily available).",
+      "why": "book the lowest cost direct flight where direct flights are readily available"
+    },
+    {
+      "lines": [
+        118,
+        118
+      ],
+      "sha256": "39bd906b4ce265442df69f6443c5307d653bee6c221729a881ae29d8855d3111",
+      "quote": "The default class of travel for all flights is Economy.",
+      "why": "the default class for all flights is economy"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 122-123: a fully flexible ticket only in exceptional circumstances and with the DCS's and CFO's approval before booking; the conference is fixed and neither has approved, and the traveller asks for what the policy allows otherwise. The lowest cost direct non-flexible fare: Kenya Airways (lines 119-121)."
+}
