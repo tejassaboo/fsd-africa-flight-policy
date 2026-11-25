@@ -133,7 +133,8 @@
       "ECONOMY"
     ],
     "reason_codes": [
-      "APPROVAL_REQUIRED"
+      "APPROVAL_REQUIRED",
+      "REFUNDABLE_FARE_NOT_ALLOWED"
     ],
     "approvers": [
       "CHIEF_FINANCIAL_OFFICER"

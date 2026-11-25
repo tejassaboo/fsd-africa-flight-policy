@@ -116,6 +116,7 @@
     ],
     "reason_codes": [
       "ECONOMY_CLASS_LIMIT",
+      "TRAVELER_PAYS_UPGRADE",
       "UPGRADE_NOT_ELIGIBLE"
     ],
     "approvers": [

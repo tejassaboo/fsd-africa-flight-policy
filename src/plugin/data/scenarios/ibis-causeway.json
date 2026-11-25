@@ -123,6 +123,7 @@
     "reason_codes": [
       "ECONOMY_CLASS_LIMIT",
       "LONG_FLIGHT_CONDITION_NOT_MET",
+      "TRAVELER_PAYS_UPGRADE",
       "UPGRADE_NOT_ELIGIBLE"
     ],
     "approvers": [

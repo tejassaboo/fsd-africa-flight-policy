@@ -108,7 +108,9 @@
     ],
     "reason_codes": [
       "INTERNATIONAL_LONG_FLIGHT",
-      "PREMIUM_ECONOMY_ALLOWED"
+      "LONG_FLIGHT_APPROVED",
+      "PREMIUM_ECONOMY_ALLOWED",
+      "SENIOR_ROLE_ENTITLEMENT"
     ],
     "approvers": [
       "NONE",

@@ -182,7 +182,7 @@ DXB_STAFF_REQUEST = ("Please book me economy from Nairobi to Dubai on 7 January 
                      "opens the next morning.")
 
 FCO_REQUEST = ("Business class from Nairobi to Rome on 26 January if the policy allows it for this flight; if not, "
-               "economy. I'm presenting to investors in Rome the next morning.")
+               "economy. I'm presenting to investors in Rome at a dinner that evening.")
 
 
 def fco_world(minutes):
@@ -198,7 +198,7 @@ def fco_world(minutes):
 
 FCO_TRIP = {"traveller_name": "Otieno Odhiambo", "traveller_title": "Senior Investment Manager", "job_grade": 8,
                 "origin": "NBO", "destination": "FCO", "travel_date": "2027-01-26", "booking_date": "2027-01-05",
-                "work_starts": "2027-01-27 09:30", "purpose": "Investor presentation in Rome", "purpose_kind": "PARTNER_MEETING",
+                "work_starts": "2027-01-26 19:00", "purpose": "Investor presentation in Rome", "purpose_kind": "PARTNER_MEETING",
                 "requested_cabin": "BUSINESS", "sign_offs": [pillar("Mark Napier")]}
 
 AMS_REQUEST = ("Could you book me business class to Amsterdam on 9 February for the impact investors' forum, if the "
@@ -284,8 +284,8 @@ scenario(
         offer("kenya-premium", "kenya", "PREMIUM_ECONOMY", 112500),
         offer("kenya-business", "kenya", "BUSINESS", 271000),
     ]),
-    expected("BOOK", ["kenya-premium"], ["PREMIUM_ECONOMY"], ["INTERNATIONAL_LONG_FLIGHT", "PREMIUM_ECONOMY_ALLOWED"],
-             STAFF_OK, [*AIR, "OPERATING_PRINCIPLES"]),
+    expected("BOOK", ["kenya-premium"], ["PREMIUM_ECONOMY"], ["INTERNATIONAL_LONG_FLIGHT", "LONG_FLIGHT_APPROVED", "PREMIUM_ECONOMY_ALLOWED",
+                                                     "SENIOR_ROLE_ENTITLEMENT"], STAFF_OK, [*AIR, "OPERATING_PRINCIPLES"]),
     [LONG, LOWER, DIRECT],
     "An intercontinental flight of 480 minutes for a JG8 employee: business is the maximum (lines 134-136). Lines "
     "107-110 permit premium economy on long flights and let staff choose a lower class, so the premium economy the "
@@ -359,7 +359,8 @@ scenario(
              STAFF_OK, AIR),
     [LONG, DIRECT],
     "The Kenya Airways nonstop is scheduled at 421 minutes: more than 7 hours, intercontinental, JG8, so business "
-    "(lines 134-136); the only business fare is the direct one.",
+    "(lines 134-136); the only business fare is the direct one. The traveller presents at a dinner the evening they "
+    "land, so the activity on arrival (lines 125-126) also supports the higher class.",
     twin_of="cassava-ledge", twin_fact="nonstop scheduled at 421 or 420 minutes")
 
 scenario(
@@ -368,7 +369,7 @@ scenario(
     trip(**{**FCO_TRIP, "traveller_name": "Joyce Akinyi", "traveller_title": "Senior Investment Manager"}),
     fco_world(420),
     expected("BOOK", ["kenya-economy"], ["ECONOMY"],
-             ["ECONOMY_CLASS_LIMIT", "LONG_FLIGHT_CONDITION_NOT_MET", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
+             ["ECONOMY_CLASS_LIMIT", "LONG_FLIGHT_CONDITION_NOT_MET", "TRAVELER_PAYS_UPGRADE", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
     [LONG, DEFAULT, DIRECT],
     "The nonstop is scheduled at 420 minutes: exactly 7 hours, not 'more than 7 hours' (lines 134-136), so economy "
     "(line 118) at the lowest cost direct flight (lines 119-121): the Kenya Airways economy fare, not the cheaper "
@@ -393,7 +394,7 @@ scenario(
     trip(**{**AMS_TRIP, "traveller_name": "Kevin Barasa"}, job_grade=5),
     search("NBO", "AMS", "2027-02-09", AMS_FLIGHTS, AMS_OFFERS),
     expected("BOOK", ["kenya-economy"], ["ECONOMY"],
-             ["ECONOMY_CLASS_LIMIT", "LONG_FLIGHT_CONDITION_NOT_MET", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
+             ["ECONOMY_CLASS_LIMIT", "LONG_FLIGHT_CONDITION_NOT_MET", "TRAVELER_PAYS_UPGRADE", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
     [LONG, DEFAULT, DIRECT],
     "JG5 is below 'JG6 and above' (lines 134-136), so economy (line 118) at the lowest cost direct flight: Kenya "
     "Airways economy, not the cheaper Istanbul connection (lines 119-121).",
@@ -472,7 +473,7 @@ scenario(
         offer("british-business", "british", "BUSINESS", 246000),
         offer("dubai-economy", "dubai", "ECONOMY", 47000),
     ]),
-    expected("BOOK", ["kenya-economy"], ["ECONOMY"], ["ECONOMY_CLASS_LIMIT", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
+    expected("BOOK", ["kenya-economy"], ["ECONOMY"], ["ECONOMY_CLASS_LIMIT", "TRAVELER_PAYS_UPGRADE", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
     [TRAINING, LONG, DIRECT],
     "JG7 on a 520-minute intercontinental flight would get business (lines 134-136), but the trip is to attend "
     "training: 'All flights to attend training, regardless of duration' are economy (line 137). The lowest cost "
@@ -498,7 +499,7 @@ scenario(
         offer("nairobi-economy", "nairobi", "ECONOMY", 41000),
     ]),
     expected("BOOK", ["egyptair-economy"], ["ECONOMY"],
-             ["ECONOMY_CLASS_LIMIT", "LONG_FLIGHT_CONDITION_NOT_MET", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
+             ["ECONOMY_CLASS_LIMIT", "LONG_FLIGHT_CONDITION_NOT_MET", "TRAVELER_PAYS_UPGRADE", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
     [AFRICA, LONG, DIRECT],
     "Johannesburg to Cairo is a flight within Africa: economy (line 128). The 480-minute flight is over 7 hours, but "
     "the business row of lines 134-136 is for intercontinental flights. The lowest cost direct economy fare: "
@@ -523,8 +524,8 @@ scenario(
         offer("amsterdam-business", "amsterdam", "BUSINESS", 270000),
     ]),
     expected("BOOK", ["kenya-business"], ["BUSINESS"],
-             ["DIRECT_FLIGHT_PREFERRED", "INTERNATIONAL_LONG_FLIGHT", "SENIOR_ROLE_ENTITLEMENT",
-              "TRAVELLER_LIMIT_PER_FLIGHT"], ["NONE"], [*AIR, "GROUP_TRAVEL", "SAFETY_AND_SECURITY"]),
+             ["DIRECT_FLIGHT_PREFERRED", "INTERNATIONAL_LONG_FLIGHT", "LONG_FLIGHT_APPROVED",
+              "SENIOR_ROLE_ENTITLEMENT", "TRAVELLER_LIMIT_PER_FLIGHT"], ["NONE"], [*AIR, "GROUP_TRAVEL", "SAFETY_AND_SECURITY"]),
     [NED, GROUP, DIRECT],
     "A non-executive director may fly business (lines 130-131; this is her second business flight of the year, within "
     "the 3 expected). Three Board members are already on the BA 19:30 nonstop, and lines 277-279 ask that no more than "
@@ -534,10 +535,10 @@ scenario(
 scenario(
     "namib-orchard", "hidden_clause", ["multi_leg", "dearer_option"],
     "Business class from London to Nairobi on 12 April if the policy allows it; otherwise economy. The all-staff "
-    "retreat starts at nine the next morning.",
+    "retreat starts at ten the next morning.",
     trip(traveller_name="Sarah Okafor", traveller_title="Senior Manager, Research (remote, London)", job_grade=7,
          works_remotely=True, origin="LHR", destination="NBO", travel_date="2027-04-12", booking_date="2027-03-22",
-         work_starts="2027-04-13 09:00", purpose="FSD Africa all-staff retreat in Nairobi", purpose_kind="STAFF_EVENT",
+         work_starts="2027-04-13 10:00", purpose="FSD Africa all-staff retreat in Nairobi", purpose_kind="STAFF_EVENT",
          requested_cabin="BUSINESS", sign_offs=[pillar("Mark Napier")]),
     search("LHR", "NBO", "2027-04-12", NBO_FROM_LHR, [
         offer("british-economy", "british", "ECONOMY", 60500),
@@ -546,7 +547,7 @@ scenario(
         offer("kenya-business", "kenya", "BUSINESS", 305000),
         offer("amsterdam-economy", "amsterdam", "ECONOMY", 49000),
     ]),
-    expected("BOOK", ["kenya-economy"], ["ECONOMY"], ["ECONOMY_CLASS_LIMIT", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
+    expected("BOOK", ["kenya-economy"], ["ECONOMY"], ["ECONOMY_CLASS_LIMIT", "TRAVELER_PAYS_UPGRADE", "UPGRADE_NOT_ELIGIBLE"], STAFF_OK, AIR),
     [REMOTE, LONG, DIRECT],
     "JG7 on a 520-minute intercontinental flight would get business (lines 134-136), but the traveller is a remote "
     "worker travelling to a work event: economy 'regardless of country of residence' (lines 138-140). The lowest cost "
@@ -637,8 +638,8 @@ scenario(
         offer("british-economy", "british", "ECONOMY", 57500),
         offer("dubai-economy", "dubai", "ECONOMY", 47000),
     ]),
-    expected("REFUSE", [], ["NONE"], ["COMPANION_NOT_COVERED", "PERSONAL_TRAVEL_NOT_COVERED"], ["NONE"],
-             ["EXPENSES", "NON_REIMBURSABLE"]),
+    expected("REFUSE", [], ["NONE"], ["COMPANION_NOT_COVERED", "OUTSIDE_POLICY_SCOPE", "PERSONAL_TRAVEL_NOT_COVERED"],
+             ["NONE"], ["EXPENSES", "NON_REIMBURSABLE", "POLICY_STATEMENT"]),
     [GUESTS, NONBUSINESS],
     "Line 243: costs for personal guests are not reimbursed, nor non-business travel expenses (line 242). FSD Africa "
     "buys no ticket for a staff member's husband.")
@@ -655,7 +656,8 @@ scenario(
          dates_may_move=True,
          sign_offs=[pillar("Evans Mwangi"), sign("DIRECTOR_CORPORATE_SERVICES", "Jonathan Pike", "FLEXIBLE_FARE")]),
     search("NBO", "LHR", "2027-02-22", LHR_FLIGHTS, LHR_FLEX_OFFERS),
-    expected("FLAG_FOR_APPROVAL", ["kenya-flex"], ["ECONOMY"], ["APPROVAL_REQUIRED"], ["CHIEF_FINANCIAL_OFFICER"], AIR),
+    expected("FLAG_FOR_APPROVAL", ["kenya-flex"], ["ECONOMY"], ["APPROVAL_REQUIRED", "REFUNDABLE_FARE_NOT_ALLOWED"],
+             ["CHIEF_FINANCIAL_OFFICER"], AIR),
     [FLEX, DIRECT],
     "Lines 122-123: a fully flexible ticket needs the approval of the DCS and the CFO in advance of booking. The "
     "meeting may move (exceptional), the DCS has approved, the CFO has not: hold the lowest cost direct flexible fare "

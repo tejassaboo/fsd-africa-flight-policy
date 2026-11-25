@@ -238,8 +238,10 @@ def solve(trip, offers, hidden):
     if trip.role == Role.RELATIVE_OF_STAFF:
         if not trip.accompanies:
             raise ValueError("a relative travelling with nobody is not modelled")
-        return refuse([ReasonCode.COMPANION_NOT_COVERED, ReasonCode.PERSONAL_TRAVEL_NOT_COVERED],
-                      [Clause.NON_REIMBURSABLE, Clause.EXPENSES],
+        # Lines 68-70: the policy covers "all personnel"; a relative is none, so OUTSIDE_POLICY_SCOPE also names it.
+        return refuse([ReasonCode.COMPANION_NOT_COVERED, ReasonCode.PERSONAL_TRAVEL_NOT_COVERED,
+                       ReasonCode.OUTSIDE_POLICY_SCOPE],
+                      [Clause.NON_REIMBURSABLE, Clause.EXPENSES, Clause.POLICY_STATEMENT],
                       "Line 243: costs for personal guests are not reimbursed (also line 242, non-business travel "
                       "expenses). FSD Africa buys no ticket for a staff member's relative.")
     if trip.purpose_kind == Purpose.PERSONAL:
@@ -318,7 +320,7 @@ def business(trip, seated):
         chosen, notes, decided = direct_choice(trip, fixed_fares(timely(trip, seated, Cabin.BUSINESS)))
         reasons = [ReasonCode.SENIOR_ROLE_ENTITLEMENT]
         if where(trip) == "intercontinental" and all(over("long-flight", offer) for offer in chosen):
-            reasons.append(ReasonCode.INTERNATIONAL_LONG_FLIGHT)
+            reasons += [ReasonCode.INTERNATIONAL_LONG_FLIGHT, ReasonCode.LONG_FLIGHT_APPROVED]
         clauses = list(AIR)
         if decided:
             reasons.append(ReasonCode.DIRECT_FLIGHT_PREFERRED)
@@ -361,9 +363,10 @@ def business(trip, seated):
 
 def declined_business(trip, seated, codes, note):
     """Business is not permitted: book economy. The reason names why the request is declined, so LOWEST_FARE is
-    not accepted."""
+    not accepted; TRAVELER_PAYS_UPGRADE names lines 102-105 (a higher class is the traveller's own cost)."""
     chosen, notes, _ = direct_choice(trip, fixed_fares(timely(trip, seated, Cabin.ECONOMY)))
-    return answer(Decision.BOOK, chosen, [ReasonCode.UPGRADE_NOT_ELIGIBLE, *codes], unused_sign_offs(trip), AIR,
+    return answer(Decision.BOOK, chosen, [ReasonCode.UPGRADE_NOT_ELIGIBLE, ReasonCode.TRAVELER_PAYS_UPGRADE, *codes],
+                  unused_sign_offs(trip), AIR,
                   note.capitalize() + ", so business is not permitted; " + "; ".join(notes)
                   + ". Lines 102-105: anything above the policy is the traveller's own cost.")
 
@@ -384,7 +387,9 @@ def premium(trip, seated):
     if not business_permitted(trip, seated):
         raise ValueError("a premium economy request without a business entitlement is not modelled")
     chosen, notes, decided = direct_choice(trip, fixed_fares(timely(trip, seated, Cabin.PREMIUM_ECONOMY)))
-    reasons = [ReasonCode.PREMIUM_ECONOMY_ALLOWED, ReasonCode.INTERNATIONAL_LONG_FLIGHT]
+    # The long-flight row of lines 134-136 is what permits it, so its codes also name the reason.
+    reasons = [ReasonCode.PREMIUM_ECONOMY_ALLOWED, ReasonCode.INTERNATIONAL_LONG_FLIGHT, ReasonCode.LONG_FLIGHT_APPROVED,
+               ReasonCode.SENIOR_ROLE_ENTITLEMENT]
     if decided:
         reasons.append(ReasonCode.DIRECT_FLIGHT_PREFERRED)
     return answer(Decision.BOOK, chosen, reasons, unused_sign_offs(trip), [*AIR, Clause.OPERATING_PRINCIPLES],
@@ -448,7 +453,9 @@ def flexible(trip, seated):
     if not roles:
         raise ValueError("a flexible fare on moving plans with no approval at all is not modelled")
     missing = [role for role in FLEXIBLE_ROLES if role not in roles]
-    return answer(Decision.FLAG_FOR_APPROVAL, chosen, [ReasonCode.APPROVAL_REQUIRED], missing, AIR,
+    # The rule that calls for the sign-off (REFUNDABLE_FARE_NOT_ALLOWED, until it is given) may stand beside it.
+    return answer(Decision.FLAG_FOR_APPROVAL, chosen, [ReasonCode.APPROVAL_REQUIRED, ReasonCode.REFUNDABLE_FARE_NOT_ALLOWED],
+                  missing, AIR,
                   "Lines 122-123: a fully flexible ticket needs approval from the DCS and the CFO in advance of booking; "
                   f"only {roles[0].value} has approved, so hold the flexible fare for "
                   f"{missing[0].value}; " + "; ".join(notes) + ".")

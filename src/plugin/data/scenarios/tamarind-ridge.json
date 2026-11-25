@@ -9,7 +9,7 @@
   "twin_fact": "nonstop scheduled at 421 or 420 minutes",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "Business class from Nairobi to Rome on 26 January if the policy allows it for this flight; if not, economy. I'm presenting to investors in Rome the next morning.",
+  "request": "Business class from Nairobi to Rome on 26 January if the policy allows it for this flight; if not, economy. I'm presenting to investors in Rome at a dinner that evening.",
   "trip": {
     "traveller_name": "Otieno Odhiambo",
     "traveller_title": "Senior Investment Manager",
@@ -22,7 +22,7 @@
     "destination": "FCO",
     "travel_date": "2027-01-26",
     "booking_date": "2027-01-05",
-    "work_starts": "2027-01-27 09:30",
+    "work_starts": "2027-01-26 19:00",
     "purpose": "Investor presentation in Rome",
     "purpose_kind": "PARTNER_MEETING",
     "requested_cabin": "BUSINESS",
@@ -137,5 +137,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "The Kenya Airways nonstop is scheduled at 421 minutes: more than 7 hours, intercontinental, JG8, so business (lines 134-136); the only business fare is the direct one."
+  "design_notes": "The Kenya Airways nonstop is scheduled at 421 minutes: more than 7 hours, intercontinental, JG8, so business (lines 134-136); the only business fare is the direct one. The traveller presents at a dinner the evening they land, so the activity on arrival (lines 125-126) also supports the higher class."
 }

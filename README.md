@@ -39,9 +39,9 @@ under the hosted cap of 65,536.
 - **Success:** every field is one the answer key accepts; the cabin is graded as the chosen offer's own. Score =
   fields right / 6.
 - **Reasons on a declined request.** When the booking is not what the traveller asked for, the reason must name
-  the policy's ground, not `LOWEST_FARE`: business declined accepts `UPGRADE_NOT_ELIGIBLE` or
-  `ECONOMY_CLASS_LIMIT` (and `LONG_FLIGHT_CONDITION_NOT_MET` where the long-flight row is not met); the flexible
-  fare declined accepts `REFUNDABLE_FARE_NOT_ALLOWED`.
+  the policy's ground, not `LOWEST_FARE`: business declined accepts `UPGRADE_NOT_ELIGIBLE`,
+  `ECONOMY_CLASS_LIMIT` or `TRAVELER_PAYS_UPGRADE` (and `LONG_FLIGHT_CONDITION_NOT_MET` where the long-flight row is
+  not met); the flexible fare declined accepts `REFUNDABLE_FARE_NOT_ALLOWED`.
 - **No hidden facts:** no scenario has `answer_key_inputs`.
 
 | Scenario | Category | Expected decision (offer; cabin) | Frozen lines |

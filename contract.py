@@ -269,7 +269,7 @@ class SignOff(Output):
     subject: Annotated[
         SignOffSubject,
         "What they signed off: the trip itself, buying a fare that can be refunded or changed without a fee, "
-        "or a cabin above economy",
+        "or a class of travel above the one the policy permits for the trip (an exception)",
     ]
 
 

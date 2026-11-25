@@ -9,7 +9,7 @@
   "twin_fact": "nonstop scheduled at 420 or 421 minutes",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "Business class from Nairobi to Rome on 26 January if the policy allows it for this flight; if not, economy. I'm presenting to investors in Rome the next morning.",
+  "request": "Business class from Nairobi to Rome on 26 January if the policy allows it for this flight; if not, economy. I'm presenting to investors in Rome at a dinner that evening.",
   "trip": {
     "traveller_name": "Joyce Akinyi",
     "traveller_title": "Senior Investment Manager",
@@ -22,7 +22,7 @@
     "destination": "FCO",
     "travel_date": "2027-01-26",
     "booking_date": "2027-01-05",
-    "work_starts": "2027-01-27 09:30",
+    "work_starts": "2027-01-26 19:00",
     "purpose": "Investor presentation in Rome",
     "purpose_kind": "PARTNER_MEETING",
     "requested_cabin": "BUSINESS",
@@ -104,6 +104,7 @@
     "reason_codes": [
       "ECONOMY_CLASS_LIMIT",
       "LONG_FLIGHT_CONDITION_NOT_MET",
+      "TRAVELER_PAYS_UPGRADE",
       "UPGRADE_NOT_ELIGIBLE"
     ],
     "approvers": [
