@@ -8,7 +8,7 @@
   "raw_pdf_sha256": "ee2f833c72696a5172e80c123509a665e702237a67a001046032c6b4dbb3f082",
   "words": 3143,
   "lines": 310,
-  "source": "not recorded locally (UNVERIFIED); the raw PDF pilot_work/originals/fsd-africa/raw_fsd-africa.pdf is the pinned copy",
+  "source": "https://fsdafrica.org/wp-content/uploads/2025/07/24-04-10-Travel-Policy.pdf; byte-identical to the pinned raw PDF (sha256 checked 2026-11-25)",
   "frozen_on": "2026-11-24",
   "scenario_count": 24,
   "currency": "GBP",
