@@ -1,5 +1,7 @@
 # FSD Africa Travel Policy Flight Booking
 
+**Source of the handbook:** https://fsdafrica.org/wp-content/uploads/2025/07/24-04-10-Travel-Policy.pdf. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with FSD Africa.** The handbook is FSD Africa's *Travel & Expense Policy*, version 4.0
 (CORP-POL-006, approved March 2024), marked OFFICIAL (the UK's unrestricted marking) and distributed "Extenal"
 by its own document control, bundled verbatim for research. The public URL was not recorded when the PDF was
